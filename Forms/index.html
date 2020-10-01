@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    <title>Starbuzz Cava Machine</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title-main title">Starbuzz Cava Machine</h1>
+        <h2 class="header__title-second title">
+            Заповніть наступну форму і натисніть кнопку «Замовити», щоб оформити замовлення
+        </h2>
+    </header>
+    <main class="main">
+        <form action="POST" class="form">
+            <fieldset class="fieldset">
+                <legend class="main__form-title main__form-title-coffee">Кава</legend>
+                <label class="first-label" for="coffeeType">
+                    Виберіть каву:
+                    <select name="coffeeType" id="coffeeType" required>
+                        <option value="homeType" autofocus>Домашня суміш</option>
+                        <option value="guatemala">Гватемала</option>
+                        <option value="kenia">Кенія</option>
+                        <option value="bolivia">Болівія</option>
+                    </select>
+                </label> <br> <br>
+                <p>Тип:</p>
+                <input type="radio" id="powder" name="coffeeShape" value="true" checked required>
+                <label for="powder">Мелена кава</label><br>
+                <input type="radio" id="solid" name="coffeeShape" value="false" required>
+                <label for="solid">Кава в зернах</label><br><br>
+                <label for="coffeeCounter">
+                    Кількість кави (чашки):
+                    <input
+                            class="input"
+                            type="number"
+                            name="coffeeCounter"
+                            min="1"
+                            id="coffeeCounter"
+                            placeholder="3"
+                            required
+                    >
+                </label><br><br>
+                <label for="deliveryTime">
+                    Доставити до:
+                    <input
+                            class="input"
+                            type="time"
+                            name="deliveryTime"
+                            id="deliveryTime"
+                            required
+                    >
+                </label><br><br>
+                <p>Додаткові послуги:</p>
+                <input type="checkbox" id="pack" name="pack" value="pack">
+                <label for="pack">Подарункова упаковка</label><br>
+                <input type="checkbox" id="catalog" name="catalog" value="catalog">
+                <label for="catalog">Каталог продукції</label><br><br>
+            </fieldset>
+            <fieldset class="fieldset">
+                <legend class="main__form-title main__form-title-truck">Доставка продукції</legend>
+                <label for="name">
+                    ПІБ:
+                    <input class="input" type="text" name="name" id="name" required>
+                </label> <br><br>
+                <label for="address">
+                    Адреса:
+                    <input class="input" type="text" name="address" id="address" required>
+                </label> <br><br>
+                <label for="phone">
+                    Телефон:
+                    <input class="input"
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            required
+                            placeholder="066-066-0666"
+                    >
+                </label> <br><br>
+                <label for="email">
+                    E-mail:
+                    <input class="input"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="coffee@gmail.com"
+                            required
+                    >
+                </label> <br><br>
+                <label for="comment"></label><textarea
+                        name="comment"
+                        id="comment"
+                        cols="30"
+                        rows="4"
+                        class="input"
+                        placeholder="Залиште тут свій коментар"
+                ></textarea>
+                <br><br>
+                <input type="submit" value="Замовити">
+            </fieldset>
+        </form>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>ПІБ</th>
+                    <th>Адреса</th>
+                    <th>Телефон</th>
+                    <th>E-mail</th>
+                    <th>Тип кави</th>
+                    <th>Кількість</th>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
