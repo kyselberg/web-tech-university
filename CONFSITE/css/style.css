@@ -170,7 +170,7 @@ a:hover, a:active {
 
 .article:hover {
   background-color: #ffe9c3;
-  box-shadow: 8px 0px 51px -26px rgba(0,0,0,0.75);
+  box-shadow: 8px 0 51px -26px rgba(0,0,0,0.75);
 }
 
 .article h4 {
