@@ -1,2 +1,2 @@
-# confsite - https://web-tech-university.vercel.app/
+# confsite - https://confsite.vercel.app/
 # forms - https://forms-opal.vercel.app/
